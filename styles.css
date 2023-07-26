@@ -42,6 +42,10 @@ body {
     background: var(--color-hover-);
 }
 
+.grid-container > button.operador:hover {
+    color: #000;
+}
+
 .grid-container > .operador {
     background: var(--color-button-);
     color: var(--color-background-calculator-);
