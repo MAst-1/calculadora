@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+:root {
+    --color-background-:#fff;
+    --color-background-calculator-:#1b2223;
+    --color-hover-:#3a4f50;
+    --color-border-:#26292b;
+    --color-button-:#0ef6cc;
+}
+
+body {
+    background: linear-gradient(to right, #000, #f4fefd);
+}
+
+.grid-container {
+    display: grid;
+    justify-content: center;
+    align-content: center;
+    min-height: 100vh;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: minmax(120px, auto)repeat(5, 100px);
+}
+
+.grid-container > button {
+    cursor: pointer;
+    font-size: 2rem;
+    border: none;
+    outline: none;
+    background: var(--color-background-calculator-);
+    color: var(--color-background-);
+}
+
+.grid-container > button:hover{
+    background: var(--color-hover-);
+}
+
+.grid-container > .operador {
+    background: var(--color-button-);
+}
+
+.span-2 {
+    grid-column: span 2;
+}
+
+.grid-container > .output {
+    grid-column: 1 / -1;
+    background: var(--color-border-);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-around;
+    padding: 10px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.grid-container > .output > .current-operand {
+    color:rgba(255,255,255, 0.75);
+    font-size: 1.5rem;
+}
+
+.grid-container > .output > .previous-operand {
+    color: var(--color-background-);
+    font-size: 2.5rem;
+}
