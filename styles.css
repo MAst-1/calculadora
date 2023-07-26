@@ -43,7 +43,7 @@ body {
 }
 
 .grid-container > button.operador:hover {
-    color: #000;
+    color: #fff;
 }
 
 .grid-container > .operador {
